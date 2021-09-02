@@ -48,12 +48,5 @@ Anidamiento:
     También existe el caso en el que un article contenga varias secciones, el articulo independiente podría ser navegadores y este contener dentro secciones como navegadores más utilizados en 2020.
 
 ## Section vs article II (video 12)
-`` 
-<section>
-    <h2>Noticias del Día</h2>
-        <article>Noticia 1</article>
-        <article>Noticia 2</article>
-        <article>Noticia 3</article>
-</section> 
-``
+
 
