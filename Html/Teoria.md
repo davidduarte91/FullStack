@@ -44,7 +44,6 @@ Cada título con los "h" tienen su jerarquía. Si un h3 está debajo de un h2, p
 Anidamiento:
     Un section puede contener articles, por ejemplo. si tenemos varios artículos que hablan sobre etiquetas HTML, deben ir dentro de un section, ya que es contenido relacionado entre sí, y los article serían contenido independiente porque podríamos leer uno sin haber leído el resto, y seguiría teniendo sentido.
     El article es definido como un componente de la páguna de contenido independiente, esto implica que esta etiqueta pueda tener un header y un footer propios.
-
     También existe el caso en el que un article contenga varias secciones, el articulo independiente podría ser navegadores y este contener dentro secciones como navegadores más utilizados en 2020.
 
 ## Section vs article II (video 12)
