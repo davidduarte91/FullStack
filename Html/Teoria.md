@@ -56,4 +56,5 @@ Anidamiento:
 </section>
 ```
 > No es semánticamente correcto
-Para detectar si una pagína web está correcta se puede visitar [Markuo Validation Services](https://validator.w3.org/)
+
+Para detectar si una pagína web está correcta se puede visitar [Markup Validation Services](https://validator.w3.org/)
