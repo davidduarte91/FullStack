@@ -55,4 +55,4 @@ Anidamiento:
         <article>Noticia 3</article>
 </section>
 ```
-
+> No es semánticamente válido de esta manera
