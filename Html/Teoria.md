@@ -55,4 +55,5 @@ Anidamiento:
         <article>Noticia 3</article>
 </section>
 ```
-> No es semánticamente válido de esta manera
+> No es semánticamente correcto
+Para detectar si una pagína web está correcta se puede visitar [Markuo Validation Services](https://validator.w3.org/)
