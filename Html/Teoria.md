@@ -84,4 +84,4 @@ Para detectar si una pagína web está correcta se puede visitar [Markup Validat
 > Ahora sí está semánticamente correcto. Se puede comprobar con el validator. Cada article puede tener un header y footer (no es obligatorio, pero como son contenido independiente se les permite tener ambos)
 
 ## Section vs Article III (video 13)
-Ahorá se verá el caso de un ``article`` conteniendo un ``section``
+Ahorá se verá el caso de un `article` conteniendo un `section`
