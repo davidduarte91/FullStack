@@ -58,3 +58,30 @@ Anidamiento:
 > No es semánticamente correcto
 
 Para detectar si una pagína web está correcta se puede visitar [Markup Validation Services](https://validator.w3.org/)
+
+> En el ejemplo de arriba la página de validator dice que no identifica los headers en cada artículo
+
+```
+<section>
+    <h2>Noticias del Día</h2>
+        <article>
+            <header>
+                 <h3>Noticia 1</h3>
+            </header>
+            <p>Lorem ipsum dolor </p>
+            <footer>La noticia 1 ocurrió en Madrid</footer>
+        </article> 
+        <article>
+            <h3>Noticia 2</h3>
+            <p>Lorem ipsum dolor </p>
+        </article>
+        <article>
+            <h3>Noticia 3</h3>
+            <p>Lorem ipsum dolor </p>
+        </article>
+</section>
+```
+> Ahora sí está semánticamente correcto. Se puede comprobar con el validator. Cada article puede tener un header y footer (no es obligatorio, pero como son contenido independiente se les permite tener ambos)
+
+## Section vs Article III (video 13)
+Ahorá se verá el caso de un ``article`` conteniendo un ``section``
