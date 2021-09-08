@@ -46,6 +46,8 @@ Anidamiento:
     El article es definido como un componente de la páguna de contenido independiente, esto implica que esta etiqueta pueda tener un header y un footer propios.
     También existe el caso en el que un article contenga varias secciones, el articulo independiente podría ser navegadores y este contener dentro secciones como navegadores más utilizados en 2020.
 
+    Un section también puede anidar otros sections como por ejemplo, para definir características referentes a un tema particular. Un section global seria sobre animales donde podriamos incluir cada animal en otro section para brindar más información sobre ese animal (Animales > Elefante > Características)
+
 ## Section vs article II (video 12)
 ```
 <section>
@@ -85,3 +87,10 @@ Para detectar si una pagína web está correcta se puede visitar [Markup Validat
 
 ## Section vs Article III (video 13)
 Ahorá se verá el caso de un `article` conteniendo un `section`
+
+## Aside (v. 14)
+> aside: se utiliza para representar contenido relacionado pero que no forma parte del contenido principal. 
+
+Por ejemplo ``` <aside> Visita mi canal de Youtube </aside> ```
+
+Puede estar dentro o fuera del `main`. Dorian normalmente lo deja fuera, ya que no forma parte del contenido principal. Depende de cada uno.
