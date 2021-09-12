@@ -99,9 +99,9 @@ El `id` va en el artículo y en el `href` va el nombre del id con el *#*
 
 ## Introducción a las listas (video 26 - listas.html)
 Las listas en HTML sirven para listar contenido. En función del tipo de contenido de nuestra lista tenemos tres tipos de listas:
-*ul* -> *unordered list:* Se utilizan cuando el orden de los elementos no influye (lista de la compra)
-*ol* -> *ordered list:* Se utilizan cuando el orden de los elementos es importante (top 10)
-*dl* -> *definition list:* Se utilizan para hacer una lista de definiciones (diccionario)
+* **ul** -> **unordered list:** Se utilizan cuando el orden de los elementos no influye (lista de la compra)
+* **ol** -> **ordered list:** Se utilizan cuando el orden de los elementos es importante (top 10)
+* **dl** -> **definition list:** Se utilizan para hacer una lista de definiciones (diccionario)
 
 ## Listas desordenadas (video 27 - listas.html)
 Semántica correcta de un menú
