@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Estructura básica de un formulario</title>
+</head>
+<body>
+    
+    <form>
+        <label>Nombre</label>
+        <input>
+        <button>Enviar formulario</button>
+    </form>
+
+    <form> <!--Si hago clic en Nombre, me habilita el campo donde puedo completar-->
+        <label for="name">Nombre</label>
+        <input id="name">
+        <button>Enviar</button>
+        
+        <br>
+
+        <label> <!--Manera no tan común de usar porque no permite jugar mucho con los elementos-->
+            Nombre
+            <input>
+        </label>
+        <button>Enviar</button>
+    </form>
+
+</body>
+</html>

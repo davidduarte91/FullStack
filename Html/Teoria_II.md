@@ -103,6 +103,8 @@ Las listas en HTML sirven para listar contenido. En función del tipo de conteni
 * **ol** -> **ordered list:** Se utilizan cuando el orden de los elementos es importante (top 10)
 * **dl** -> **definition list:** Se utilizan para hacer una lista de definiciones (diccionario)
 
+Cada elemento de la lista se representa con la etiqueta <li>, tanto en las ul como en las ol
+
 ## Listas desordenadas (video 27 - listas.html)
 Semántica correcta de un menú
 ```
@@ -116,3 +118,164 @@ Semántica correcta de un menú
     </ul>
 </nav>
 ```
+
+## Listas ordenadas (video 28 - listas.html)
+Es muy importante saber cuando es correspondiente usar una lista ordenada o desordenada, ya que el navegador los interpreta de distintas maneras.
+
+## Listas de definición (video 29 - listas.html)
+Cada elemento de una lista de definición lleva 2 etiquetas:
+* **dt** -> **Definition term:** El término que vamos a definir.
+* **dd** -> **Definition description:** La descripción del término.
+
+## Listas anidadas y de atributos (video 30 - )
+Se pueden construir listas anidadas teniendo en uno de los `li` otro ul/ol según sea necesario. Se pueden construir de cualquier manera
+
+```
+<ol>
+    <li>
+        HTML
+        <ul>
+            <li>Estructura</li>
+            <li>Sintaxis</li>
+            <li>Etiquetas</li>
+        </ul>
+    </li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+</ol>
+```
+
+* Atributos de las listas:
+
+        ol ->
+            type: Estilo de numeración (1, A, a, I, i)
+            start: Inicio de la secuencia (un número)
+        ul ->
+            type: Estilo de los items (disc, square, circle)
+
+
+## Introducción a las tablas (video 31 - tablas.html)
+Las tablas en HTML sirven para mostrar contenido tabulado
+
+La estructura básica de una tabla se compone de:
+* **table:** Etiqueta que encierra una tabla.
+* **tr:** table row, etiqueta que construye una fila.
+* **td:** table data, etiqueta que construye una celda.
+
+**truco:** el número de celdas dentro de un `td` establecerá el número de columnas de una tabla. 
+
+## Estructura completa de una tabla (video 33 - tablas.html)
+Los *títulos* de las tablas se establecen con la etiqueta `caption`, es una etiqueta opcional, y según la especificación, esa etiqueta se coloca justo después de la etiqueta table.
+
+Las *cabeceras* de las tablas se establecen con la etiqueta `thead`. Dentro tendremos un etiqueta `tr` normal, pero en el caso de las celdas, las estableceremos con la etiqueta `th` en lugar de `td`
+
+El contenido de la tabla debe ir dentro de una etiqueta `tbody` para representar el cuerpo de la tabla.
+
+De forma opcional podemos colocar un `tfood` a la tabla para establecer un pie de tabla, esto es algo que algunas tablas tienen como suma de cantidades o total.
+
+## Atributos de las tablas (video 34 - tablas.html)
+Para hacer que las celdas ocupen más de una fila o más de una columna tenemos dos atributos:
+- *rowspan*: sirve para queuna celda ocupe más de una gila, el valor por defecto es 1
+- *colspan:* sirve para que una celda ocupe más de una columna, el valor por defecto es 1
+
+Cuando se usa `rowspan` hay que tener en cuenta que "empuja" a las celdas que están debajo, y ese caso hay que eliminar una celda
+
+## Seleccionar columnas (video 35 - tablas.html)
+Si necesitamos que una etiqueta `col` agrupe más de una columna, tenemos el atributo `span`, que funciona exactamente igual que `rowspan` y `colspan`
+
+```
+<colgroup>
+     <col span="5"> <!--equivale a la primera columna-->
+     <col>          <!--a la segunda-->
+</colgroup>
+```
+
+## Más etiquetas importantes de bloques (video 37 - otras_etiquetas_bloque.html)
+- *addres:* Se utiliza para aportar información de contacto para el article más cercano o para todo el body
+- *blokquote:* Se utiliza para marcar las citas a otros autores o ducumentos. Se puede incluir el atributo `cite` para poner un enlace al documento original y fuente
+- *pre:* Se utiliza para tener código preformateado que necesita ser representado igual que se escribió
+- *div:* Se usa como división del documento, semánticamente no significa nada. Es un contenedor genérico que se usa generalmente para dar estilos a través de css o para usar algo denominado "delegación de eventos" en javascript
+- *hr:* horizontal rule. Se utiliza para decirle al navegador que vamos a cambiar de tema
+
+##  Más etiquetas de linea (video 38 - otras_etiquetas_linea.html )
+- *span:* Es un contenedor de línea, equivalente a `div`. Se suele usar oara encerrar palabras o pequeñps textos y darles estilo a través de CSS o localizarlos desde JavaScript. Semánticamente no significa nada.
+
+- *q:* Es el equivalente a blockquote. Significa quote (por eso el de bloque se llama block - quote). Sirve para poner citas pero en línea.
+
+- *code:* Sirve para encerrar código que queremos representar visualmente. Suele ir unido con la etiqueta `pre`
+
+Entidades especiales en HTML - (Código ASCII)[https://ascii.cl/es/codigos-html.htm]
+
+* Simbolos en el teclado. (& + ctrl + espacio) -> da todas las combinaciones que se pueden hacer para obtener símbolos
+
+## Estructura básica de formulario (video 40 - estructura_basica.html)
+La estructura básica de un formulario se compone de 4 elementos
+- *form:* es la etiqueta que engloba nuestro formulario.
+- *label:* Sirve para escribir el nombre del campo a rellenar. Debe tener el atributo `for` al cual se le indica un `id` que lo que hará será emparejar el label con su input correspondiente.
+- *input:* Sirve para crear un campo que permitirá al usuario interactuar. El único atributo obligatorio del input es `name`
+- *button:* crea un botón que permitirá enviar el formulario
+
+Cuando se clickea en el button, que hace el envío del formulario, por defecto el navegador reinicia la página. Eso se puede pausar con JS. 
+
+A dónde va el formulario luego de tocar el botón de "enviar" se define en el atributo del `form`
+```
+<form action="contacto.html">
+</form>
+```
+## Asociar input y label (video 41 - estructura_basica.html)
+```
+<form>
+    <label for="name">Nombre</label>
+    <input id="name">
+    <button>Enviar</button>
+</form>
+```
+## Button vs type button (video 42 - tipos-de-input.html)
+Algunos de los tipos de `inputs` que existen
+- *button:* Se comporta igual que un botón `<button>`
+- *submit:* para enviar el formulario
+
+- *date:* Se utiliza para introducir una fecha
+- *datetime:* Obsoleto
+- *datetime-local:* fecha y hora. No funciona en firefox
+- *time:* para introducir una hora
+    TIP
+        Se recomienda usar datetime-local y time para seleccionar fecha y hora
+- *hidden:* Campo oculto. Puede contener valor pero no se mostrará
+- *month:* para introducir un mes
+- *week:* para introducir el número de semana del año
+
+- *color:* Se utiliza para especificar un color
+- *number:* para introducir valores numéricos
+- *range:* para establecer un rango
+- *reset:* para resetear el formulario
+
+- *search:* para las barras de búsqueda
+- *tel:* para introducir números telefónicos
+- *email:* para introducir un email
+- *password:* para contraseñas
+- *url:* para introducir URLs
+
+- *text:* valor por defecto
+
+
+
+`<input type="button" value="Name">` hay una diferencia con poner la etiqueta `<button>Name</button>`. En el primero se coloca el atributo value.
+
+Un <input type="button"> no sirve para enviar el formulario, sino para realizar alguna acción usando JS. Se ve porque no refresca la página y en cambio con el <button> sí. Para que pueda enviarse el formulario se utiliza el `type="submit"`
+
+## Inputs para fechas (video 43 - tipos-de-input.html)
+```
+<form>
+    <input type="date">
+    <input type="datetime-local">
+    <input type="date">
+    <input type="time">
+    <input type="month">
+    <input type="week">
+</form>
+```
+## Inputs para celulares (video 44 tipos-de-inpus)
+Para ver en el celular:
+- en la búsqueda poner "cmd" y se abre la consola
+- ahora poner "ipconfig" y sale la dirección de red
