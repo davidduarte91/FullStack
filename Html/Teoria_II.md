@@ -103,7 +103,7 @@ Las listas en HTML sirven para listar contenido. En función del tipo de conteni
 * **ol** -> **ordered list:** Se utilizan cuando el orden de los elementos es importante (top 10)
 * **dl** -> **definition list:** Se utilizan para hacer una lista de definiciones (diccionario)
 
-Cada elemento de la lista se representa con la etiqueta <li>, tanto en las ul como en las ol
+Cada elemento de la lista se representa con la etiqueta `<li>`, tanto en las ul como en las ol
 
 ## Listas desordenadas (video 27 - listas.html)
 Semántica correcta de un menú
