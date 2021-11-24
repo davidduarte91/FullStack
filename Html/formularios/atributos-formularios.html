@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos de los formularios</title>
+</head>
+<body>
+    <form>
+        <input type="text" placeholder="Introduce tu nombre" required> <!--el usuario puede desactivar el "required" desde "inspeccionar elemento". Por eso existen otras validaciones que se hacen con js-->
+        <input type="text" value="Hola" readonly> <!--con "readonly" no se puede editar ni borrar-->
+        <input type="text" value="Hola" disabled>
+        <input type="number" min="5" max="10"> <!--no es obligatorio poner min y max juntos, puede ir uno solo-->
+        <input type="text" minlength="3" maxlength="5" required autofocus> <!--con el "autofocus" al cargar la pagina, automaticamente me permite escribir donde puse el foco-->
+        <input type="submit">
+        <select name="numbers">
+            <option value="one">One</option>
+            <option value="two" selected>Two</option>
+        </select>
+    </form>
+</body>
+</html>

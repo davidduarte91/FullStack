@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Elementos seleccionables</h1>
+    <form>
+        <h2>Género</h2>
+        <label>Masculino
+            <input type="radio" name="gender" value="masculino" checked> <!--checked es un atributo booleano y se coloca así. Sirve para dejar marcada una opción por defecto.
+            
+            El "value=masculino" sirve que para cuando se envié el formulario a un servidor, detecte la selección "gender" y la elección "masculino"-->
+        </label>
+        <label>Femenino
+            <input type="radio" name="gender" value="femenino">
+        </label>
+        <label>Otro
+            <input type="radio" name="gender" value="otro">
+        </label>
+        <!--Se coloca el atributo obligatorio "name" con el mismo nombre en cada label porque de esa manera le digo al navegador que las tres opciones pertenecen a la misma categoría y entonces permite seleccionar una sola opción-->
+
+        <h2>Lenguajes que conoces</h2>
+        <label>
+            HTML
+            <input type="checkbox" name="languajes" value="html" checked>
+        </label>
+        <label>
+            CSS
+            <input type="checkbox" name="languajes" value="css" checked>
+        </label>
+        <label>
+            JavaScript
+            <input type="checkbox" name="languajes" value="javascript">
+        </label>
+    </form>
+
+    <form>
+        <select name="lenguajes" multiple> <!--"multiple es para seleccionar más de uno"-->
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select>
+
+        <select name="mascotas">
+            <optgroup label="4 patas">
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="hamster">Hamster</option>
+                <option value="conejo">Conejo</option>
+            </optgroup>
+            <optgroup label="aves">
+                <option value="loro">Loro</option>
+                <option value="canario">Canario</option>
+            </optgroup>
+            <optgroup label="otras">
+                <option value="serpiente">Serpiente</option>
+                <option value="tarantula">Tarantula</option>
+            </optgroup>
+        </select>
+    </form>
+
+    <form>
+        <input type="list" list="pets"> <!--lo bueno es que tiene un filtro, un buscador. Es más fácil para el usuario-->
+        <datalist id="pets">
+            <option value="perro"></option>
+            <option value="gato"></option>
+            <option value="hamster"></option>
+            <option value="conejo"></option>
+            <option value="loro"></option>
+            <option value="canario"></option>
+            <option value="serpiente"></option>
+            <option value="tarantula">Tarantula</option>
+            <!--elimina los nombres en medio de las option porque se muestra como principal lo que está en el value-->
+        </datalist>    
+    </form>
+</body>
+</html>

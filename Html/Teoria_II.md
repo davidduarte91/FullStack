@@ -275,7 +275,67 @@ Un <input type="button"> no sirve para enviar el formulario, sino para realizar 
     <input type="week">
 </form>
 ```
-## Inputs para celulares (video 44 tipos-de-inpus)
-Para ver en el celular:
+## Inputs para celulares (video 44 tipos-de-inputs)
+Para ver en el celular: (esto es para ver cómo el teclado va variando de acuerdo el `type` que se coloque. No me funcionó en el celular. Volver a intentar más adelante)
 - en la búsqueda poner "cmd" y se abre la consola
 - ahora poner "ipconfig" y sale la dirección de red
+
+## Inputs extra (video 45 - tipos-de-input.html)
+- *color:* Se utiliza para especificar un color
+- *number:* para valores numéricos. No deja ingresar letras
+- *range:* para establecer un rango. Con el atributo `step` se puede colocar cada cuánto aumenta y con "min" y "max" desde qué hasta qué número
+- *reset:* para resetear el formulario
+- *text:* valor por defecto
+
+## Input radio (video 46 - inputs-de-selección.html)
+- *radio:* Permite seleccionar una única opción de una lista de opciones relacionadas
+
+Se coloca el atributo obligatorio "name" con el mismo nombre en cada label porque de esa manera le digo al navegador que las tres opciones pertenecen a la misma categoría y entonces permite seleccionar una sola opción
+
+`checked` es un atributo booleano y se coloca así. Sirve para dejar marcada una opción por defecto
+
+El `value=masculino` sirve que para cuando se envíe el formulario a un servidor, detecte la selección "gender" y la elección "masculino"
+
+## Input checkbox (video 47 - inputs-de-selección.html)
+- *checkbox:* permite seleccionar varias opciones de una lista de opciones relacionadas.
+El input también puede ir fuera del label. Se pueden utilizar los atributos `chequed` (pueden usarse en más de uno) y `value` como en el radio.
+
+## Elemento select básico (video 48 - inputs-de-seleccion.html)
+- *select:* crea una lista de opciones donde podemos seleccionar una o varias opciones. No son un input tipo `select` sino que son una etiqueta aparte. Es una mezcla entre "radio" y "checkbox".
+Cada opción irá dentro de una etiqueta `<option> </option>`
+
+El atributo "multiple" es para seleccionar más de uno
+
+## Elemento select avanzado (video 49 - inputs-de-seleccion.html)
+Si tenemos muchas opciones podemos ordenarlas por categorías a través de la etiqueta `<optgroup></optgroup>` con el atributo *label* para nombrar la categoría.
+
+## Datalist (video 50 - inputs-de-seleccion.html)
+Datalist son muy similares a los select, solo que incluyen un filtro para que se pueda buscar de una forma más sencilla.
+
+```
+<form>
+        <input type="list" list="pets">
+        <datalist id="pets">
+            <option value="perro"></option>
+            <!--elimina los nombres en medio de las option porque se muestra como principal lo que está en el value-->
+        </datalist>    
+</form>
+```
+## Más elementos para formularios (video 51 - mas-elementos.html)
+- *fieldset:* Se utiliza para agrupar elementos dentro de un formulario.
+- *legend:* Representa una etiqueta para el contenido del fieldset
+- *file:* Este input se utiliza para cargar archivos y enviarlos desde un formulario
+- *meter:* Representa un valor dentro de un rango conocido
+- *progress:* representa el progreso de una tarea
+- *textarea:* se utiliza para introducir texto en un formulario
+
+## Atributos para formularios (video 52 - atributos-formularios.html)
+Hay bastantes. Hay que fijarse en la documentación para conocer más.
+- *placeholder:* Da una pista de lo que el usuario tiene que introducir. Para tema de estilos con lo que está escrito en el input, no se utiliza placeholder. Se usa css
+- *required:* Hace que un campo sea obligatorio. el usuario puede desactivar el "required" desde "inspeccionar elemento". Por eso existen otras validaciones que se hacen con js. Igualmente hay que usarlo como primera validación
+- *readonly:* Hace que un campo sea de solo lectura. Sí envía lo que tiene escrito
+- *disabled:* Desactiva el campo, no se podrá escribir en el autofocus. No se envía lo que tiene escrito
+- *min - max:* Establece el mínimo y máximo de un campo numérico. No es obligatorio poner min y max juntos, puede ir uno solo
+- *minlenght - maxlenght:* Establece el mínimo y máximo de caracteres de un campo de texto
+- *selected:* Equivale a checked en los select. Sirve para establecer una opción por defecto
+- *autofocus:* Para cargar el foco por defecto al cargar el formulario
