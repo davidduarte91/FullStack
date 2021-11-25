@@ -15,12 +15,13 @@ Haciendo lo mismo con post, da un error 405 y en la barra de búsqueda no aparec
 - Estos archivos son los que más peso (tamaño) añaden a un sitio web
 - Los tipos más conocidos son: Imágenes, audio, video, iframes
 
-* **Imágenes:** Los formatos de imágenes para web los podemos clasificar en 2 tipos:
+### Imágenes
+Los formatos de imágenes para web los podemos clasificar en 2 tipos:
  1. Vectoriales:
- - svg (recomendado siempre que se pueda)
+    - svg (recomendado siempre que se pueda)
  2. Mapa de bits
- - jpg
- - png 8 y 24 (si se necesita transparencias)
- - gif (para imagen animada)
- - webp (el formato que menos pesa) 
+    - jpg
+    - png 8 y 24 (si se necesita transparencias)
+    - gif (para imagen animada)
+    - webp (el formato que menos pesa) 
   
