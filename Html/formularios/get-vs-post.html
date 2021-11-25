@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get vs Post</title>
+</head>
+<body>
+    <form action="enviar.html" method="POST">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name">
+        <label for="surname">Apellido</label>
+        <input type="text" id="surname" name="surname">
+        <input type="submit">
+    </form>
+
+    <!-- El método GET es el que se ejecuta cuando entramos a una página a través de la url, es decir desde la barra de navegación. Cuando toca "enviar" en la barra aparece al final "enviar.html?" y dice en pantalla que "no puede hacer un GET a enviar formularios/enviar.html". Es el método por defecto que tienen todas las páginas cuando entramos a través de la url.
+    
+    Por otro lado está el envío POST, es el envío de formularios por la parte de atrás de la página. Cuando tocamos "enviar" el comportamiento es distinto. No dice que no está pudiendo hacer un GET a enviar.html, simplemente nos da un error 405. Esto significa que él ha intentado enviar la información pero la información no ha llegado, no ha encontrado el archivo para enviarle esa información.
+    
+    Volviendo al GET, al dar enviar a lo último aparece un signo de interrogación y nos pone que no puede hacer el get. Después de esa interrogación, irían los campos que se están enviando del formulario. Por eso el atributo "name" es obligatorio, porque si no lo ponemos no estamos enviando información realmente.
+
+    Luego de colocar los "name" en cada input, en la barra de búsqueda se puede ver los datos que se están enviando por url. Esta es la forma de hacerlo a través de la url. Como los campos están vacíos no se están enviando nada, pero luego de colocar mis datos en las casillas y tocar "enviar", ya se pueden ver los datos en la barra de búsqueda
+
+    Haciendo lo mismo con post, da un error 405 y en la barra de búsqueda no aparece nada. Para ver los datos que se están enviando hay que ir a inspeccionar elemento -> pestaña Network -> clear para borrar todo -> luego "enviar" y en enviar.html en la parte de abajo se verán los datos-->
+</body>
+</html>
