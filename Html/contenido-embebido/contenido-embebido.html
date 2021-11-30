@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido embebido</title>
+    <style>
+        img {
+            max-width: 100%;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contenido embebido</h1>
+    <!-- <img src="/contenido-embebido/assets/images/Pokemon-gifs-7.webp" alt="pikachu saludando"> el atributo alt es necesario ponerlo por buenas prácticas -->
+
+    <img src="/contenido-embebido/assets/images/arbolito.webp" width="300" alt=""> <!--no es recomendable poner el width acá, solo en casos específicos y es cuando las imágenes son dinámicas y las cargamos desde JS. Aunque puso 300, el navegador entiende que son 300px. Aunque aumente el tamaño de pantalla, la imagen seguirá midiendo 300px. En teoría, si el espacio que tenemos disponible en un teléfono son 360px, esta imagen se debería ver bien en un teléfono.
+    
+    Si tuviéramos un DPR en los teléfonos de 1, esta imagen se vería bien. Pero el DPR de los teléfonos suele ser 2 o 3, entonces para lograr eso simula que está en un celu y hace zoom al 200% para subir el DPR a 2. Y para comprobarlo entra a "consola" y escribe "devicepixelratio" y dice el número (y debería estar en 2 por ser un celu supuestamente)
+
+    Si la imagen se desborda, coloca el style y la img en "max-width: 100%" y ahí ya no se desborda. Pero hay que tener en cuenta que aunque se ve bien en el celu, se tiene una imagen de 1000px. Pero pesa mucho y en un celu no hace falta que tenga ese tamaño, y es un error muy común usar la misma imagen para escritorio como para móvil. Se logra que se vea bien en el celu, pero el tamaño es demasiado grande para obtener el mismo resultado final. Sería más lógico una imagen de 1000px para escritorio y 200px para movil.
+
+-->
+</body>
+</html>
