@@ -1,0 +1,54 @@
+body {
+    background-color: coral;
+    font-family: 'Roboto', 'sans-serif';
+}
+
+h1, h2, h3, h4, h5, h6 { /*para seleccionar varios elementos */
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-size: 24px; /* comentario */
+}
+
+/* h2 {     así cambiarán todos los h2
+    color: aqua;
+} */
+
+div h2 { /* cambiará solo el h2 dentro de un div */
+    color:aqua;
+}
+
+/* IDs y Clases */
+/* IDs son únicos por elemento y las Clases son repetibles*/
+
+#parrafo-especial { /* es un id */
+    font-size: 1.5em;
+    font-weight: bold; /*aumenta el grosor. Sería como la negrita */
+}
+
+.parrafo { /* Es una clase. Se aplicó a dos párrafos */
+    color: blue;
+    font-style: italic;
+}
+
+/* Para cambiar de linea a bloque. Así un link e imagen pueden estar separados */
+a, img {
+    display: block;
+}
+
+a {
+    margin: 50px 20px;
+    text-decoration: none; /* para sacar el subrayado y color del link */
+    color: black;
+}
+
+a:hover { /*pseudo-selector para cuando pasa el cursor */
+    color: aqua;
+}
+
+img {
+    width: 70%; /*la 2da imagen no será responsive xq ya tiene medidas asignadas */
+    margin: auto; 
+}

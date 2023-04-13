@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calculadora HTML</title>
+    <script src="./index.js" defer></script> <!--defer es para que el script cargue después del html-->
+</head>
+<body>
+    <h1>Calculadora HTML</h1>
+    <form action="" method="dialog"> <!--method="dialog" para que no recargue la página-->
+        <input type="text" id="op1" placeholder="Operador 1">
+        <input type="text" id="operacion" placeholder="+, -, /, *">
+        <input type="text" id="op2" placeholder="Operador 2">
+        <input type="submit" value="Calcular" id="calcular"> <!--sacó el onclick=calcular() y lo configuró en js. Sirven ambos-->
+        <div id="txtresultado">
+            <p>resultado: </p>
+        </div>
+        <div  id="resultado">
+            <p></p>
+        </div>
+    </form>
+  
+</body>
+</html>

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,200&display=swap');
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /*Cuando se aplica la propiedad box-sizing: border-box a un elemento, el ancho y la altura del elemento se calculan incluyendo el relleno y el borde, por lo que el tamaño total del elemento es más predecible y controlable.*/
+	font-family: 'Poppins', sans-serif;
+}
+:root /*:root es un selector de CSS que se utiliza para seleccionar el elemento raíz de un documento HTML, es decir, el elemento <html>.*/
+{
+	--clr: #222327; /* se utiliza para definir una variable de CSS personalizada llamada --clr y asignarle un valor de #222327, que se puede utilizar en todo el documento HTML.*/
+}
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh; /*Al establecer min-height: 100vh, se asegura que el elemento siempre tendrá al menos la altura de la ventana gráfica, incluso si su contenido es más corto que eso. Esto puede ser útil para crear fondos de pantalla completos, por ejemplo.*/
+	background: var(--clr);
+}
+.navigation
+{
+	position: relative; /*Al establecer position: relative en un elemento, este se desplazará de forma relativa a su posición original, pero seguirá ocupando el mismo espacio en el flujo normal del documento. */
+	width: 400px;
+	height: 70px;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+}
+.navigation ul
+{
+	display: flex;
+	width: 350px;
+}
+.navigation ul li
+{
+	position: relative;
+	list-style: none;
+	width: 70px;
+	height: 70px;
+	z-index: 1; /*z-index: 1; establece que un elemento tiene un orden de apilamiento relativamente bajo en comparación con otros elementos en la misma área y puede ser superpuesto por elementos con un valor de z-index mayor.*/
+}
+.navigation ul li a
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	text-align: center;
+	font-weight: 500;
+}
+.navigation ul li a .icon
+{
+	position: relative;
+	display: block;
+	line-height: 75px; /*es una propiedad de CSS que se utiliza para establecer la altura de línea de un bloque de texto. La altura de línea es la distancia vertical entre las líneas de texto y se mide desde la parte superior de la línea hasta la parte superior de la siguiente línea.*/
+	font-size: 1.5em;
+	text-align: center;
+	transition: 0.5s;
+	color: var(--clr)
+}
+.navigation ul li.active a .icon
+{
+	transform: translateY(-35px);
+}
+.navigation ul li a .text
+{
+	position: absolute; /*A diferencia de position: relative, que crea un nuevo contexto de posicionamiento relativo, position: absolute saca el elemento del flujo normal del documento y lo coloca en una posición absoluta en la página. Por lo tanto, los elementos que estén debajo del elemento posicionado pueden ocupar su espacio y reordenarse para llenar el espacio vacío.*/
+	color: var(--clr);
+	font-weight: 400;
+	font-size: 0.75em;
+	letter-spacing: 0.05em;
+	transition: 0.5s;
+	opacity: 0;
+	transform: translateY(20px);
+}
+.navigation ul li.active a .text
+{
+	opacity: 1;
+	transform: translateY(10px);
+}
+
+.indicator
+{
+	position: absolute;
+	width: 70px;
+}

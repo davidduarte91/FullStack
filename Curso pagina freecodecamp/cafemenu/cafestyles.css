@@ -1,0 +1,3 @@
+h1, h2, p { /*para agregar el mismo estilo a varios, se separan por comas*/
+    text-align: center;
+}

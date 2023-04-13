@@ -1,0 +1,24 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+input {
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+    border-color: blue;
+    color: darkblue;
+    border-radius: 9px;
+    text-align: center;
+}
+
+#txtresultado {
+    display: inline-block;
+}
+
+#resultado {
+    display: inline-block;
+    border: 2px solid;
+    width: 10%;
+    height: 20%;
+}

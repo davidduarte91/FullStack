@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Document</title>
+</head>
+<body>
+  <!-- Para comentario "ctrl + /" -->
+  <!-- Indentación: En la barra de abajo dice "Espacios: 4". Se toca y se puede cambiar. Ctrl + [ añade dos espacios. Ctrl + ] resta dos espacios-->
+  <!-- Adaptar el texto al tamaño de pantalla: alt + z -->
+
+  <!-- Títulos. Elemento en bloque -->
+  <h1>Hola Mundo</h1>
+  <h2>heading 2</h2>
+  <h3>heading 3</h3>
+  <h4>heading 4</h4>
+  <h5>heading 5</h5>
+  <h6>heading 6</h6>
+
+  <!-- Párrafo. Elemento en bloque -->
+  <p>Hola soy un párrafo</p>
+  <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, tempore perspiciatis officia laudantium soluta voluptate minus voluptatibus mollitia nostrum molestiae nesciunt adipisci eos illo nemo deserunt placeat in unde sapiente!</p>
+
+  <!-- Salto de línea -->
+  <br>
+  <p id="parrafo-especial">Hola soy David. <br>Y tengo 31 años</p> <!--Los IDs son únicos. 1 por elemento-->
+
+  <!-- Etiquetas que solo se abren -->
+  <br>
+  <img>
+  <link>
+
+  <!-- Línea horizontal para dividir dos secciones -->
+  <p class="parrafo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint velit dolore corporis, harum quod, officia voluptatem eaque nostrum expedita explicabo saepe enim qui ab! Placeat dolorem ullam iure sed consequatur.</p>
+  <hr>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illo deserunt corporis. Molestias, quasi officia, neque sint distinctio facilis laborum velit dolorum, beatae tenetur non quibusdam ad nostrum nihil minima.</p>
+
+  <!-- links. Elemento en línea. target="_blank" para abrir en otra pestaña -->
+  <a href="https:/www.google.com.ar" target="_blank" rel="noopener noreferrer">Soy un link a Google</a><br> <!--rel="noopener noreferrer" se debe usar por seguridad para evitar el tabnabbing. Es cuando la pestaña de origen se reemplaza por uno donde poner los datos privados que luego se lo roban -->
+
+  <!--Enlaces internos: esta es la manera de hacer enlaces internos-->
+  <a href="#parrafo-1">Párrafo 1</a>
+
+  <h3 id="parrafo-1"></h3>
+
+  <!--Enlaces muertos: No llevan a ningún lado y se usa para probar cómo se ve el enlace-->
+  <p>Haz click para ver más <a href="#">imágenes de gatos</a></p>
+
+  <!-- Imágenes. Son elementos en línea -->
+  <img src="https://static.dw.com/image/45953099_303.jpg" alt="cachorrito"> <!--Imagen en linea-->
+  <img src="cachorro.jpg" alt="" width="400" height="300"> <!-- Imagen cargado localmente. Las modificaciones hacerlas en CSS-->
+  <img src="imagenes/cachorro.jpg"> <!--si la imagen está en una carpeta-->
+
+  <!--Imágenes como enlaces-->
+  <a href=""><img src="" alt=""></a>
+
+  <!-- Listas -->
+  <!-- Listas no ordenadas -->
+  <ul>
+    <li></li>
+  </ul>
+  <!-- Listas ordenadas -->
+  <ol>
+    <li></li>
+  </ol>
+
+  <!-- Etiqueta strong. Se usa para indicar que el texto es importante -->
+  <p>Cosas que los gatos <strong>odian</strong>:</p>
+
+  <!-- <em>. Texto en cursiva, para enfatizar parte del contenido -->
+  <p>Cosas que los gatos <em>aman</em>:</p>
+
+  <!-- <s>, texto tachado -->
+  <li><s>Lasaña</s></li>
+
+  <!-- <hr> - Línea horizontal. Se puede usar para separar párrafos -->
+  <hr>
+
+  <!-- Etiquetas que ayudarán a estructurar mejor -->
+  <div>
+      <h2>Soy un título</h2>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis, quasi. Nulla facilis quaerat, nemo velit soluta esse modi blanditiis, dolore quidem provident eius quae voluptatum porro excepturi, deserunt suscipit alias?</p>
+  </div> 
+  <main></main> <!--contenido principal. No debe ser descendiente de otra etiqueta, solo del body-->
+  <header></header>
+  <footer></footer>
+  <section></section>
+  <article></article>
+
+  <!-- Crear formularios -->
+  <form action="/enviar-respuesta">
+    <input type="text" placeholder="URL de la foto de tu gato" required> <!--required: campo obligatorio-->
+
+    <label for="interior">
+      <input id="interior" type="radio" value="interior" name="interior-exterior">Interior
+    </label> <!--Al rodear con label, seleccionando el texto se selecciona la casilla. For y id deben concidir-->
+
+    <label for="exterior">
+      <input id="exterior" type="radio" value="exterior" name="interior-exterior">Exterior
+    </label> <!--name para crear grupo de botones de radio. Deben ser el mismo. De esa manera solo seleccionará uno-->
+
+    <button type="submit"></button>
+
+    <!--Casillas de verificación-->
+    <!--value: especifica qué valor se enviará al servidor-->
+    <label for="carinoso">
+      <input id="carinoso" type="checkbox" value="carinoso" name="personalidad" checked>Cariñoso
+    </label> <!--chequed: selección por defecto-->
+    <label for="perezoso">
+      <input id="perezoso" type="checkbox" value="perezoso" name="personalidad">Perezoso
+    </label>
+    <label for="energico">
+      <input id="energico" type="checkbox" name="personalidad">Enérgico
+    </label>
+  </form>
+
+  <!--Elemento div - Contenedor genérico
+  Todos los estilos que se apliquen a ese div afectará a lo que esté dentro-->
+
+  <!--Pie de paǵina. Debería estar fuera de main-->
+  <footer>
+    <p>Sin derechos de autos</p>
+  </footer>
+
+  <!--small, para hacer el texto más pequeño-->
+  
+</body>
+</html>
