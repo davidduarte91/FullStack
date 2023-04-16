@@ -1,0 +1,35 @@
+/*
+Recordar que están:
+    margin-top
+    margin-right
+    margin-bottom
+    margin-left
+
+margin: 20px(top y bottom) 50px(right y left)
+
+"Cuando el margin es 0, no hace falta poner px"
+
+Cuando el div.hijo no baja con el margin-top:
+    La razón por la que el margin-top del .hijo no baja con respecto al padre es porque el margen superior del .hijo se está colapsando con el margen superior del padre. Este comportamiento se debe a la especificación de CSS, que establece que cuando dos márgenes adyacentes (en este caso el margen superior del hijo y el margen superior del padre) se encuentran, se colapsan en un solo margen.
+
+    En este caso, el margen superior del div con la clase hijo está colapsando con el margen superior del div con la clase padre. Para evitar esto, se puede establecer un borde superior al div con la clase padre, lo que evitará que los márgenes superiores se colapsen.
+
+    Nueva solución:
+    Cuando le añadí el padding al padre, el relleno "empujó" hacia dentro el elemento hijo. Por lo tanto es una manera de separar los elementos para no usar el borde transparente.
+    
+*/
+.padre {
+    background: orange;
+    height: 300px;
+    width: 300px;
+    margin: 20px;
+    /* border-top: 1px solid transparent; se agrega un borde superior transparente para evitar que los márgenes se colapsen */
+    padding: 20px;
+}
+
+.hijo {
+    height: 100px;
+    width: 100px;
+    background: black;
+    margin: 20px;
+}
