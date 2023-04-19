@@ -1,0 +1,13 @@
+.padre {
+    width: 200px;
+    height: 200px;
+    background: #f13929;
+    position: fixed;
+    right: 0; /*lo coloca a la derecha*/
+    bottom: 0; /*lo coloca abajo de todo*/
+}
+.hijo {
+    width: 300px;
+    height: 400px;
+    background: #7888EA;
+}

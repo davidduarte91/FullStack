@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    min-height: 70px; /*la altura mínima del header*/
+    display: flex;
+    background-color: #14161A;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img { /*accede a imagen dentro de la clase logo (la tiene el primer <a>*/
+    height: 50px;
+    margin-right: 12px; /*para separar un poco el nombre de la empresa del logo*/
+}
+
+nav a {
+    font-weight: 600;
+    padding-right: 10px; /*para separar los links por la derecha*/
+}
+
+nav a:hover {
+    color: rgb(204, 242, 35);
+}

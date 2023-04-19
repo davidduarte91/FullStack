@@ -7,7 +7,13 @@ body {
 }
 
 .container {
-    background: #202020;
+    background: #3e2d2d;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    gap: 20px; /*para separar las cajas entre ellas*/
 }
 
 .uno {
