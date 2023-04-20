@@ -14,6 +14,7 @@ header {
     background-color: #14161A;
     justify-content: space-between;
     align-items: center;
+    padding: 10px; /*relleno para que sus hijos vayan hacia adentro y no se peguen tanto a los bordes*/
 }
 
 .logo {
@@ -34,3 +35,19 @@ nav a {
 nav a:hover {
     color: rgb(204, 242, 35);
 }
+/*--------------------------------------------------------------*/
+@media (max-width: 680px) {
+    header {
+        flex-direction: column
+    }
+    nav {
+        padding: 10px 0px;
+    }
+}
+/*Este código CSS utiliza la regla @media para aplicar estilos específicos cuando la pantalla es más pequeña que 680 píxeles de ancho. En otras palabras, estos estilos se aplicarán solo a dispositivos móviles y otros dispositivos con pantallas pequeñas.
+
+Dentro de la regla @media, se especifica que el elemento header debe tener una dirección de columna (flex-direction: column) en lugar de la dirección predeterminada de fila, lo que significa que los elementos en el encabezado se apilarán uno encima del otro en lugar de estar uno al lado del otro.
+
+También se especifica que el elemento nav debe tener un relleno de 10 píxeles en la parte superior y inferior (padding: 10px 0px) pero ningún relleno a los lados. Esto puede ayudar a hacer que el menú de navegación sea más fácil de tocar y seleccionar en dispositivos móviles.
+
+En resumen, este código CSS adapta los estilos del encabezado y el menú de navegación para que sean más adecuados para dispositivos móviles y pantallas pequeñas.*/
