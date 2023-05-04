@@ -1,0 +1,81 @@
+body {
+    font-family: sans-serif;
+    background-color: aqua;
+}
+
+.imagenes-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /*colocando la altura del viewport pudo centrar en la columna*/
+}
+
+.imagenes-container .imagen {
+    position: relative; /*se pueden mover de su posición original. Con el absolute se apilan todas las imágenes*/
+    margin-right: -20px;
+    display: inline-flex; /*para que vaya de izquierda a derecha en linea*/
+    flex-direction:column;
+}
+
+.imagenes-container .imagen img {
+    width: 200px;
+    height: 200px;
+    transition: transform 0.32s ease-in-out;
+}
+
+.imagenes-container .imagen .nombre {
+    position: absolute;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    display: none; /*hace como si desapareciera de la pantalla*/
+    min-width: 100px;
+    width: 150px;
+    top: -55px; /*de su posición original, sube 55px. Sube xq es negativo*/
+   
+    padding: 10px 15px; /*el paading manda hacia dentro al hijo*/
+}
+
+.imagenes-container .imagen .nombre .text {
+    display: inline-block; /*agrega un cuadrado extra alrededor del texto*/
+    text-overflow: ellipsis; /*text-overflow controla cómo se maneja el desbordamiento de contenido dentro de un contenedor de ancho fijo. */
+    overflow: hidden; /*el contenido que no cabe dentro del contenedor no se muestra en absoluto y se recorta*/
+    white-space: nowrap; /*significa que los espacios en blanco se colapsarán en un solo espacio y los saltos de línea se tratarán como un espacio en blanco.*/
+    margin: 0 auto;
+    width: 150px; /*cuando el texto sale de los 150px, lo que hace es ocultarlo*/
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.imagenes-container .imagen:hover .nombre { /*cuando pase el mouse por la imagen, afectará a la clase nombre*/
+    display: inline-block;
+    transform: translateY(-20px); /*sube 20px*/
+}
+
+.imagenes-container .imagen .nombre::before { /*para agregar triangulito. Es un decorador*/
+    content: "";
+    position: absolute; /*con respecto a su contenedor padre*/
+    width: 1px;
+    height: 1px;
+    left: 40%;
+    bottom: -20px;
+
+    /*acá abajo se forma un cuadrado perfecto, pero los bordes right, left y bottom se hacen transparentes. Por eso se forma el triangulo*/
+    border-top: 10px solid black;
+    border-left: 10px solid transparent; 
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.imagenes-container .imagen:hover img { /*en conjunto con el ".imagenes-container .imagen img" que está más arriba*/
+    transform: translateY(-20px);
+}
+
+/*Para responsive*/
+@media (max-width: 680px) {
+    .imagenes-container {
+        flex-direction: column; /*hasta acá, no se ve la cabeza de Ash*/
+        height: 180vh; /*ocupa el 180% de la pantalla*/
+    }
+}

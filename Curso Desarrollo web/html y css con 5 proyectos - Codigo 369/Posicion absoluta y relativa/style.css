@@ -1,3 +1,7 @@
+body {
+    font-family: sans-serif;
+}
+
 .padre {
     width: 200px;
     height: 200px;
@@ -12,4 +16,19 @@
     position: absolute; /*buscará que el padre esté posicionado, sino usará el body*/
     right: 0;
     bottom: 0;
+}
+
+.box {
+    display: inline-block;
+    background-color: #f13929;
+    width: 100px;
+    height: 100px;
+    color: azure;
+}
+
+#dos {
+    position: relative;
+    background-color: green;
+    top: 20px;
+    left: 20px;
 }
